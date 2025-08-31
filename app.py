@@ -125,7 +125,7 @@ if uploaded_file is not None:
     st.success("PDF uploaded successfully!")
 
 st.divider()
-stock_ticker = st.text_input("Nvidia Ticker:")
+stock_ticker = st.text_input("Nvidia Ticker:", "NVDA")
 competitors = st.text_input("Competitors (comma-separated):", "AMD, Intel, Qualcomm")
 
 if st.button("Generate Report"):
@@ -139,6 +139,7 @@ if st.button("Generate Report"):
         st.warning("Please provide Nvidia's stock ticker or upload a PDF document.")
 
 st.divider()
+
 
 
 
