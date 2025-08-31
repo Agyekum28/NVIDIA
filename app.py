@@ -42,7 +42,12 @@ set_llm_cache(InMemoryCache())
 # Load environment variables from .env file
 load_dotenv()
 # LLM and Search Tool Initialization
-llm = ChatGroq(model="llama-3.3-70b-versatile temp=0.2", max_retries=3, timeout=120)
+llm = ChatGroq(
+    model="llama-3.3-70b-versatile",  # ✅ valid model name
+    temperature=0.2,                  # ✅ set temp as a separate argument
+    max_retries=3,
+    timeout=120
+)
 search_tool = TavilySearch()
 
 
@@ -134,5 +139,6 @@ if st.button("Generate Report"):
         st.warning("Please provide Nvidia's stock ticker or upload a PDF document.")
 
 st.divider()
+
 
 
