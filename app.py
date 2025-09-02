@@ -44,7 +44,7 @@ load_dotenv()
 # LLM and Search Tool Initialization
 llm = ChatGroq(
     model="llama-3.3-70b-versatile",  # ✅ valid model name
-    temperature=0.2,                  # ✅ set temp as a separate argument
+    temperature=0.01,                  # ✅ set temp as a separate argument
     max_retries=3,
     timeout=120
 )
@@ -139,6 +139,7 @@ if st.button("Generate Report"):
         st.warning("Please provide Nvidia's stock ticker or upload a PDF document.")
 
 st.divider()
+
 
 
 
